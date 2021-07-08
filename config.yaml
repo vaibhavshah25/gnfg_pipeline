@@ -1,0 +1,31 @@
+graph:
+  uri_scheme: 'bolt'
+  host: '10.1.253.19'
+  port: '7687'
+  username: 'neo4j'
+  password: 'w1r3mdm'
+
+kafka_params:
+  #bootstrap_servers: ['10.1.1.46:9092']
+  bootstrap_servers: ['10.1.253.6:9092']
+
+  topics:
+    consuming_from : 'gold_copied_data'
+    producing_to : 'write_to_mongo'
+
+  group_ids:
+    consuming_from : 'gold_copied_data_aca'
+    producing_to : 'write_to_mongo'
+
+  auto_offset_reset: 'earliest'
+
+debug_params:
+    INPUT_MESSAGE_VERBOSE_PRINT : True
+    INPUT_MESSAGE_PRINT : True
+    OUTPUT_MESSAGE_VERBOSE_PRINT : True
+    OUTPUT_MESSAGE_PRINT : True
+
+
+job_params:
+  buffer_size: 10
+
