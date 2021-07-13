@@ -1,6 +1,6 @@
 graph:
   uri_scheme: 'bolt'
-  host: '10.1.253.19'
+  host: '40.143.89.232'
   port: '7687'
   username: 'neo4j'
   password: 'w1r3mdm'
