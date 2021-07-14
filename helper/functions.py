@@ -92,7 +92,7 @@ def write_records_to_file(file_path, records):
     Header is string containing neo4j node label.
     Remaining lines are read into a list. These are the values of the primary properties.
     """
-    with open(file_path, 'a') as f:
+    with open(file_path, 'w') as f:
         for record in records:
             f.write(str(record) + '\n')
 

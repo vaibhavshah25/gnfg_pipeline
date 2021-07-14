@@ -42,9 +42,7 @@ if __name__ == '__main__':
 
     # create the graph driver
     graph_config = config['graph']
-    paths = GNFG.start(graph_config, output_file, VERBOSE)
+    paths = GNFG.start(graph_config=graph_config, VERBOSE=VERBOSE, output_file=output_file,)
 
     if VERBOSE:
         print(f"{time.ctime()} Processing complete!\n")
-
-
